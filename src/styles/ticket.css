@@ -1,0 +1,13 @@
+.ticket-shape {
+  position: relative;
+  border-radius: 1rem;
+  background-color: white;
+
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 330'%3E%3Crect width='400' height='330' rx='24' fill='white'/%3E%3Ccircle cx='0' cy='165' r='12' fill='black'/%3E%3Ccircle cx='400' cy='165' r='12' fill='black'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 330'%3E%3Crect width='400' height='330' rx='24' fill='white'/%3E%3Ccircle cx='0' cy='165' r='12' fill='black'/%3E%3Ccircle cx='400' cy='165' r='12' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+}
