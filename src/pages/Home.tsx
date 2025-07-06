@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <>
-      <main className="py-[180px] flex flex-wrap items-center justify-center gap-5 p-10 h-fit">
+      <main className="flex flex-wrap items-center justify-center gap-5 ">
         <Card bgImage={bg1}>
           <CardHeader bgImage={headBg1}>
             <h1 className="uppercase">Visitor 3 Day Access Ticket</h1>
@@ -383,7 +383,7 @@ const Home = () => {
       </main>
 
       <footer
-        className="h-20 absolute z-10 bottom-[-80px] w-full"
+        className="h-20 absolute z-10 bottom-[-80px] left-0 w-full"
         style={{
           background: "linear-gradient(to right, #299D3F, #123F22)",
         }}

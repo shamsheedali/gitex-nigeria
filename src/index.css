@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+:root {
+  --gradient-green: linear-gradient(to right, #299D3F, #123F22);
+  --gradient-red: linear-gradient(to right, #AB0202, #240102);
+  --gradient-purple: linear-gradient(to right, #5C2F66, #25102C);
+}
+
+.bg-gradient-green{
+  background-image: var(--gradient-green);
+}
+
+.bg-gradient-red{
+  background-image: var(--gradient-red);
+}
+
+.bg-gradient-purple{
+  background-image: var(--gradient-purple);
+}
