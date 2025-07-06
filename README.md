@@ -121,7 +121,31 @@ Here's a detailed breakdown of the project's directory and file structure, expla
 └───utils/             # Utility functions or helper modules
 fontawesome.ts # Configuration or helper for FontAwesome icons
 ```
+---
+## 🛣️ Available Routes
 
+The application uses React Router to manage navigation. Below are the primary routes and the components they render:
+
+1.  **/ (Home Page):**
+
+
+    Renders the Home component within the main Layout. This is the landing page of the application.
+
+
+2.  **/login (Login Page):**
+
+    Renders the Login component, providing an interface for user authentication.
+
+
+3.  **/success (Success Page):**
+
+    Renders the Success component, likely displayed after a successful action.
+
+4.  *** (Not Found):**
+
+    Any unhandled or invalid URL path will render the NotFound component.
+
+    All these routes are nested within the <Layout /> component, ensuring a consistent header, footer, and overall page structure across the application.
 
 ---
 
