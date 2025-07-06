@@ -4,6 +4,7 @@ import layoutBg from "@/assets/images/common/layout-bg.png";
 import allPartnersLogo from "@/assets/images/common/all-partners-logo.png";
 import { Stepper } from "@/components/ui/Stepper";
 import { Button } from "@/components/ui/button/Button";
+import RegistrationSummary from "@/components/forms/RegistrationSummary";
 
 const Login = () => {
   const [step, setStep] = useState(1);
@@ -79,89 +80,7 @@ const Login = () => {
         </div>
       ) : (
         // Step 4
-        <div className="bg-white p-6 rounded-md shadow-md">
-          {/* Header */}
-          <div className="bg-gradient-green text-white py-5 rounded-md px-6 flex justify-between items-center flex-wrap">
-            <h1 className="font-bold text-xl">Registration Summary</h1>
-          </div>
-
-          {/* Ticket details */}
-          <div className="mt-6 space-y-3 text-sm sm:text-base text-black">
-            <div className="flex justify-between font-bold">
-              <span>PREMIUM TICKET x 2</span>
-              <span>EUR 40.19</span>
-            </div>
-            <hr className="border-t border-[#EBEBEB]" />
-
-            <div className="flex justify-between font-bold text-black">
-              <span>Student Ticket Access On Day 3 Only</span>
-              <span>EUR 50.40 SUBJECT TO APPROVAL Incl. 19%</span>
-            </div>
-            <hr className="border-t border-[#EBEBEB]" />
-          </div>
-
-          {/* Promo code input */}
-          <div className="bg-green-50 border border-dashed border-green-300 rounded-md mt-6 p-4">
-            <label
-              htmlFor="promo"
-              className="block text-green-700 font-semibold mb-2"
-            >
-              Have a promo code?
-            </label>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <input
-                id="promo"
-                type="text"
-                placeholder="Enter Promo code"
-                className="flex-1 px-4 py-2 border border-gray-300 rounded-md"
-              />
-
-              <Button
-                title="Apply"
-                size="md"
-                className="bg-gradient-red font-bold"
-              />
-            </div>
-          </div>
-
-          {/* Total */}
-          <div className="mt-6 flex justify-end font-bold text-lg sm:text-xl">
-            <span>Total:&nbsp;</span>
-            <span className="text-black">EUR 300</span>&nbsp;
-            <span className="text-sm font-normal text-gray-600">
-              Incl. 19% VAT
-            </span>
-          </div>
-
-          {/* Consent checkboxes */}
-          <div className="mt-6 space-y-5 text-sm text-gray-700">
-            <div className="flex items-start gap-3">
-              <input type="checkbox" id="consent1" className="mt-1" />
-              <label htmlFor="consent1">
-                I have read and accept the{" "}
-                <a href="#" className="text-red-600 underline">
-                  terms and conditions, Privacy Policy
-                </a>
-                , and consent that attendees under the age of 21 will not be
-                admitted, and admission to the exhibition is restricted to trade
-                and business professionals only, and students above 16 and below
-                18 can attend only if accompanied by school or faculty member{" "}
-                <span className="text-red-500">*</span>
-              </label>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <input type="checkbox" id="consent2" className="mt-1" />
-              <label htmlFor="consent2">
-                I hereby consent the use of my data by the organiser, exhibitors
-                and sponsors of DWTC & KAOUN International to delivering
-                services and for marketing purposes. I am aware that I can
-                object to the sending of newsletters at any time{" "}
-                <span className="text-red-500">*</span>
-              </label>
-            </div>
-          </div>
-        </div>
+        <RegistrationSummary />
       )}
 
       {/* Navigation buttons */}
@@ -175,7 +94,7 @@ const Login = () => {
           />
         )}
         <Button
-          title={step === totalSteps ? "Finish" : "Next"}
+          title="Next"
           size="md"
           className="bg-gradient-green font-bold"
           onClick={nextStep}

@@ -23,7 +23,7 @@ export const Button = ({
   return (
     <button
       className={clsx(
-        "rounded-lg text-white cursor-pointer transition-colors duration-200 hover:opacity-90 disabled:opacity-50 disabled:pointer-events-none",
+        "rounded-lg text-white uppercase cursor-pointer transition-colors duration-200 hover:opacity-90 disabled:opacity-50 disabled:pointer-events-none",
         sizeClasses[size],
         className
       )}
