@@ -5,8 +5,10 @@ import { Checkbox } from "@/components/ui/Checkbox";
 import { useState } from "react";
 import { Button } from "../ui/button/Button";
 import { PhoneSelector } from "../ui/PhoneSelector";
+import Modal from "../ui/Modal";
 
 const LoginForm = () => {
+  const [open, setOpen] = useState(false);
   const [selectedMainCategories, setSelectedMainCategories] = useState<
     string[]
   >([]);
@@ -127,6 +129,7 @@ const LoginForm = () => {
               title="Select Solutions/Products"
               size="lg"
               className="bg-gradient-red font-extrabold"
+              onClick={() => setOpen(true)}
             />
           </div>
         </div>
@@ -212,6 +215,8 @@ const LoginForm = () => {
           ))}
         </div>
       </div>
+
+{open && <Modal onClose={() => setOpen(false)} />}
     </div>
   );
 };

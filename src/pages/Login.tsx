@@ -5,13 +5,17 @@ import allPartnersLogo from "@/assets/images/common/all-partners-logo.png";
 import { Stepper } from "@/components/ui/Stepper";
 import { Button } from "@/components/ui/button/Button";
 import RegistrationSummary from "@/components/forms/RegistrationSummary";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [step, setStep] = useState(1);
   const totalSteps = 4;
 
+  const navigate = useNavigate();
+
   const nextStep = () => {
     if (step < totalSteps) setStep(step + 1);
+    else navigate('/success');
   };
 
   const prevStep = () => {
