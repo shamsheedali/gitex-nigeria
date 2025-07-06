@@ -5,7 +5,7 @@ const Success = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex items-center justify-center min-h-[70vh] bg-gradient-to-br from-lime-50 to-green-50">
+    <div className="flex items-center justify-center min-h-[70vh]">
       <div className="bg-white p-8 sm:p-12 rounded-xl shadow-md max-w-xl w-full text-center border-t-4 border-green-600">
         <h1 className="text-2xl sm:text-3xl font-extrabold text-black mb-4">
           THANK YOU!

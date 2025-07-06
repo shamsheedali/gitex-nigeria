@@ -20,8 +20,8 @@ const workshops = [
 
 const Modal = ({ onClose }: { onClose: () => void }) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">
-      <div className="bg-white w-full max-w-4xl rounded-2xl overflow-hidden shadow-xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 px-4 overflow-y-auto">
+      <div className="bg-white w-full max-w-4xl rounded-2xl shadow-xl mt-10 mb-10 overflow-hidden">
         {/* Header */}
         <div
           className="px-6 py-4 flex justify-between items-center bg-cover"
@@ -30,19 +30,18 @@ const Modal = ({ onClose }: { onClose: () => void }) => {
           <h2 className="text-white font-bold text-lg sm:text-xl">
             SELECT WORKSHOPS
           </h2>
-          <div className="border-2 border-white h-fit w-fit p-2 rounded-full flex justify-center items-center">
-            <button
-              onClick={onClose}
-              className="cursor-pointer"
-              aria-label="Close"
-            >
+          <div
+            className="border-2 border-white h-fit w-fit p-2 rounded-full flex justify-center items-center"
+            onClick={onClose}
+          >
+            <button className="cursor-pointer" aria-label="Close">
               <X className="text-white" />
             </button>
           </div>
         </div>
 
-        {/* Content */}
-        <div className="px-6 py-6 space-y-6">
+        {/* Scrollable Content */}
+        <div className="max-h-[75vh] overflow-y-auto px-6 py-6 space-y-6">
           <input
             type="text"
             placeholder="Try Product/Service"
@@ -63,7 +62,7 @@ const Modal = ({ onClose }: { onClose: () => void }) => {
         </div>
 
         {/* Footer */}
-        <div className="flex justify-end gap-4 px-6 py-3 text-sm">
+        <div className="flex flex-col sm:flex-row sm:justify-end gap-4 px-6 py-3 text-sm">
           <Button
             title="cancel"
             className="border-2 border-black font-bold"

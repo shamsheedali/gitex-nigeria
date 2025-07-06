@@ -13,10 +13,8 @@ export default function RegistrationSummary() {
   const discountedTotal = (totalOriginal * (1 - discount)).toFixed(2);
 
   const handleApply = () => {
-    if (promoCode === "GITEX15") {
-      setAppliedCode("GITEX15");
-      setDiscount(0.15);
-    }
+    setAppliedCode("GITEX15");
+    setDiscount(0.15);
   };
 
   const handleRemove = () => {
@@ -34,7 +32,7 @@ export default function RegistrationSummary() {
 
       {/* Ticket details */}
       <div className="mt-6 space-y-3 text-sm sm:text-base text-black">
-        <div className="flex justify-between font-bold">
+        <div className="flex justify-between font-bold flex-col md:flex-row">
           <span>PREMIUM TICKET x 2</span>
           <span>
             {discount > 0 ? (
@@ -42,7 +40,7 @@ export default function RegistrationSummary() {
                 <span className="line-through text-gray-500 mr-1">
                   FREE 0.16
                 </span>
-                <div className="flex">
+                <div className="flex ">
                   <span className="text-green-700 font-semibold">
                     FREE 0.16
                   </span>
@@ -60,12 +58,15 @@ export default function RegistrationSummary() {
           </span>
         </div>
         <hr className="border-t border-[#EBEBEB]" />
-
-        <div className="flex justify-between font-bold">
-          <span>Student Ticket Access On Day 3 Only</span>
-          <span>EUR 50.40 SUBJECT TO APPROVAL Incl. 19%</span>
-        </div>
-        <hr className="border-t border-[#EBEBEB]" />
+        {!appliedCode && (
+          <>
+            <div className="flex justify-between font-bold flex-wrap">
+              <span>Student Ticket Access On Day 3 Only</span>
+              <span>EUR 50.40 SUBJECT TO APPROVAL Incl. 19%</span>
+            </div>
+            <hr className="border-t border-[#EBEBEB]" />
+          </>
+        )}
       </div>
 
       {/* Promo code input */}
@@ -74,22 +75,22 @@ export default function RegistrationSummary() {
           Have a promo code?
         </Label>
 
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Input
-              id="promo"
-              value={promoCode}
-              onChange={(e) => setPromoCode(e.target.value)}
-              placeholder="Enter Promo code"
-            />
-            <Button
-              title="Apply"
-              onClick={handleApply}
-              className="bg-gradient-red font-bold text-white"
-            />
-          </div>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Input
+            id="promo"
+            value={promoCode}
+            onChange={(e) => setPromoCode(e.target.value)}
+            placeholder="Enter Promo code"
+          />
+          <Button
+            title="Apply"
+            onClick={handleApply}
+            className="bg-gradient-red font-bold text-white"
+          />
+        </div>
 
         {appliedCode && (
-          <div className="space-y-2 text-sm text-green-800 flex justify-between items-center">
+          <div className="space-y-2 text-sm text-green-800 flex justify-between md:items-center flex-col md:flex-row">
             <div>
               <p>
                 Promo code <strong>{appliedCode}</strong> applied successfully!
@@ -116,19 +117,18 @@ export default function RegistrationSummary() {
               style={{ color: "#C7000C" }}
             />
           </div>
-        )
-        }
+        )}
       </div>
 
       {/* Total */}
       {appliedCode ? (
         <div className="mt-6 flex flex-col justify-end font-bold text-lg sm:text-xl">
-          <div className="flex justify-between font-semibold">
+          <div className="flex justify-between font-semibold flex-wrap gap-3 md:gap-0">
             <span>Student Ticket Access On Day 3 Only</span>
             <span>EUR 50 40 SUBJECT TO APPROVAL Incl. 19% </span>
           </div>
 
-          <div className="mt-3 text-sm flex justify-between">
+          <div className="mt-3 text-sm flex justify-between flex-col md:flex-row">
             <div>
               <span>Total:&nbsp;</span>
               <span className="text-gray-600 line-through">EUR 300</span>
@@ -138,9 +138,18 @@ export default function RegistrationSummary() {
               </span>
             </div>
 
-            <div className="flex gap-2">
-                <Button title="Back" size="sm" className="font-bold border-2 border-black" style={{color: 'black'}} />
-                <Button title="Next" size="sm" className="font-bold bg-gradient-green" />
+            <div className="flex gap-2 flex-col md:flex-row">
+              <Button
+                title="Back"
+                size="sm"
+                className="font-bold border-2 border-black"
+                style={{ color: "black" }}
+              />
+              <Button
+                title="Next"
+                size="sm"
+                className="font-bold bg-gradient-green"
+              />
             </div>
           </div>
         </div>

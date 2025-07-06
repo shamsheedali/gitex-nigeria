@@ -12,7 +12,7 @@ const Layout = () => {
       <Header />
       <main
         className="py-[180px] flex-1 p-10 h-fit"
-        style={!isHome ? { backgroundImage: `url(${gridBg})` } : {}}
+        style={!isHome ? { backgroundImage: `url(${gridBg})` } : {marginBottom: "80px"}}
       >
         <Outlet />
       </main>
