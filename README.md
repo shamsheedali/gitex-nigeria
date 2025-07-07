@@ -4,7 +4,7 @@
 
 ## 🚀 Overview
 
-This section is where you can briefly describe what your `gitex-nigeria` project is all about!
+This section is briefly describe what `gitex-nigeria` project is all about!
 
 ---
 
@@ -15,7 +15,7 @@ To get this project up and running on your local machine, follow these simple st
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/shamsheedali/gitex-nigeria.git](https://github.com/shamsheedali/gitex-nigeria.git)
+    git clone https://github.com/shamsheedali/gitex-nigeria.git
     ```
 
 2.  **Navigate into the project directory:**
@@ -36,7 +36,7 @@ To get this project up and running on your local machine, follow these simple st
     npm run dev
     ```
 
-    This command will typically launch the application in your browser, often at `http://localhost:3000` or a similar address.
+    This command will launch the application in your browser, at `http://localhost:5173` address.
 
 ---
 
