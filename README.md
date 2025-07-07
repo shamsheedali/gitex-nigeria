@@ -4,7 +4,7 @@
 
 ## 🚀 Overview
 
-This section is briefly describe what `gitex-nigeria` project is all about!
+This section briefly describe what `gitex-nigeria` project is all about!
 
 ---
 
